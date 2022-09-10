@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Tugas 1 &#8212; Purnomo Ribut | Data Mining</title>
+    <title>Tugas 2 &#8212; Purnomo Ribut | Data Mining</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -139,9 +138,9 @@ const thebe_selector_output = ".output, .cell_output"
   Tugas
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Tugas-1.html">
    Tugas 1
   </a>
  </li>
@@ -204,7 +203,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/Purnomo-Ribut/datamining.git/gh-pages?urlpath=tree/_sources/Tugas-1.ipynb"
+        <a href="https://mybinder.org/v2/gh/Purnomo-Ribut/datamining.git/gh-pages?urlpath=tree/_sources/Tugas-2.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -222,7 +221,7 @@ title="Launch on Binder"
       </li>
       
       <li>
-        <a href="https://colab.research.google.com/github/Purnomo-Ribut/datamining.git/blob/gh-pages/_sources/Tugas-1.ipynb"
+        <a href="https://colab.research.google.com/github/Purnomo-Ribut/datamining.git/blob/gh-pages/_sources/Tugas-2.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -282,7 +281,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/Purnomo-Ribut/datamining.git/issues/new?title=Issue%20on%20page%20%2FTugas-1.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/Purnomo-Ribut/datamining.git/issues/new?title=Issue%20on%20page%20%2FTugas-2.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -310,7 +309,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/Tugas-1.ipynb"
+        <a href="_sources/Tugas-2.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -359,7 +358,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Tugas 1</h1>
+                <h1>Tugas 2</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -371,192 +370,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-1">
-<h1>Tugas 1<a class="headerlink" href="#tugas-1" title="Permalink to this headline">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#awal mengimpor library pandas, lalu menampilkan data yang sudah di upload di google drive</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
-<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/Classroom/Data Meaning/tugas/tugas 1/archive (2).zip&#39;</span><span class="p">)</span>
-<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-8b24b0d7-8c0b-45b2-90df-8f60a118398e">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Title</th>
-      <th>Book_category</th>
-      <th>Star_rating</th>
-      <th>Price</th>
-      <th>Stock</th>
-      <th>Quantity</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>A Light in the Attic</td>
-      <td>Poetry</td>
-      <td>Three</td>
-      <td>51.77</td>
-      <td>In stock</td>
-      <td>22</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Tipping the Velvet</td>
-      <td>Historical Fiction</td>
-      <td>One</td>
-      <td>53.74</td>
-      <td>In stock</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Soumission</td>
-      <td>Fiction</td>
-      <td>One</td>
-      <td>50.10</td>
-      <td>In stock</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Sharp Objects</td>
-      <td>Mystery</td>
-      <td>Four</td>
-      <td>47.82</td>
-      <td>In stock</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Sapiens: A Brief History of Humankind</td>
-      <td>History</td>
-      <td>Five</td>
-      <td>54.23</td>
-      <td>In stock</td>
-      <td>20</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-8b24b0d7-8c0b-45b2-90df-8f60a118398e')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-8b24b0d7-8c0b-45b2-90df-8f60a118398e button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-8b24b0d7-8c0b-45b2-90df-8f60a118398e');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-</div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#mengecek tipe data yang ada di data </span>
-<span class="n">data</span><span class="o">.</span><span class="n">dtypes</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Title             object
-Book_category     object
-Star_rating       object
-Price            float64
-Stock             object
-Quantity           int64
-dtype: object
-</pre></div>
-</div>
-</div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-2">
+<h1>Tugas 2<a class="headerlink" href="#tugas-2" title="Permalink to this headline">#</a></h1>
 </section>
 
     <script type="text/x-thebe-config">
@@ -586,13 +401,6 @@ dtype: object
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="markdown-notebooks.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Notebooks with MyST Markdown</p>
-        </div>
-    </a>
 </div>
             </footer>
         </div>
