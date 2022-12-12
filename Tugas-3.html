@@ -155,6 +155,27 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="tugas-6.html">
+   <strong>
+    Tugas 6 -
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Tugas-7.html">
+   <strong>
+    Tugas 7 -
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tugas-8.html">
+   <strong>
+    Tugas 8 - Impelemntasi Naive bayes Studi Kasus Peminjaman Uang
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="UTS.html">
    <strong>
     UTS
@@ -465,7 +486,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-73a0d78d-c9b1-434f-94cf-1c584215044e">
+  <div id="df-6b97cb2d-595f-4500-b350-295ce293d3a1">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -609,7 +630,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-73a0d78d-c9b1-434f-94cf-1c584215044e')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-6b97cb2d-595f-4500-b350-295ce293d3a1')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -660,12 +681,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-73a0d78d-c9b1-434f-94cf-1c584215044e button.colab-df-convert');
+          document.querySelector('#df-6b97cb2d-595f-4500-b350-295ce293d3a1 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-73a0d78d-c9b1-434f-94cf-1c584215044e');
+          const element = document.querySelector('#df-6b97cb2d-595f-4500-b350-295ce293d3a1');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -716,40 +737,40 @@ title="Print to PDF"
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1">#check that the target variable has been removed</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">X</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/util/_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="nn">/usr/local/lib/python3.8/dist-packages/pandas/util/_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
 <span class="g g-Whitespace">    </span><span class="mi">309</span>                     <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">310</span>                 <span class="p">)</span>
 <span class="ne">--&gt; </span><span class="mi">311</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">312</span> 
 <span class="g g-Whitespace">    </span><span class="mi">313</span>         <span class="k">return</span> <span class="n">wrapper</span>
 
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/core/frame.py</span> in <span class="ni">drop</span><span class="nt">(self, labels, axis, index, columns, level, inplace, errors)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4911</span>             <span class="n">level</span><span class="o">=</span><span class="n">level</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">4912</span>             <span class="n">inplace</span><span class="o">=</span><span class="n">inplace</span><span class="p">,</span>
-<span class="ne">-&gt; </span><span class="mi">4913</span>             <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">4914</span>         <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4915</span> 
+<span class="nn">/usr/local/lib/python3.8/dist-packages/pandas/core/frame.py</span> in <span class="ni">drop</span><span class="nt">(self, labels, axis, index, columns, level, inplace, errors)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4904</span>                 <span class="n">weight</span>  <span class="mf">1.0</span>     <span class="mf">0.8</span>
+<span class="g g-Whitespace">   </span><span class="mi">4905</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">4906</span><span class="s2">         return super().drop(</span>
+<span class="g g-Whitespace">   </span><span class="mi">4907</span><span class="s2">             labels=labels,</span>
+<span class="g g-Whitespace">   </span><span class="mi">4908</span><span class="s2">             axis=axis,</span>
 
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/core/generic.py</span> in <span class="ni">drop</span><span class="nt">(self, labels, axis, index, columns, level, inplace, errors)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4148</span>         <span class="k">for</span> <span class="n">axis</span><span class="p">,</span> <span class="n">labels</span> <span class="ow">in</span> <span class="n">axes</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-<span class="g g-Whitespace">   </span><span class="mi">4149</span>             <span class="k">if</span> <span class="n">labels</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">4150</span>                 <span class="n">obj</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">_drop_axis</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="n">level</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4151</span> 
-<span class="g g-Whitespace">   </span><span class="mi">4152</span>         <span class="k">if</span> <span class="n">inplace</span><span class="p">:</span>
+<span class="nn">/usr/local/lib/python3.8/dist-packages/pandas/core/generic.py</span> in <span class="ni">drop</span><span class="nt">(self, labels, axis, index, columns, level, inplace, errors)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4148</span><span class="s2">         for axis, labels in axes.items():</span>
+<span class="g g-Whitespace">   </span><span class="mi">4149</span><span class="s2">             if labels is not None:</span>
+<span class="ne">-&gt; </span><span class="mi">4150</span><span class="s2">                 obj = obj._drop_axis(labels, axis, level=level, errors=errors)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4151</span><span class="s2"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">4152</span><span class="s2">         if inplace:</span>
 
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/core/generic.py</span> in <span class="ni">_drop_axis</span><span class="nt">(self, labels, axis, level, errors)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4183</span>                 <span class="n">new_axis</span> <span class="o">=</span> <span class="n">axis</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="n">level</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4184</span>             <span class="k">else</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">4185</span>                 <span class="n">new_axis</span> <span class="o">=</span> <span class="n">axis</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4186</span>             <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="n">axis_name</span><span class="p">:</span> <span class="n">new_axis</span><span class="p">})</span>
-<span class="g g-Whitespace">   </span><span class="mi">4187</span> 
+<span class="nn">/usr/local/lib/python3.8/dist-packages/pandas/core/generic.py</span> in <span class="ni">_drop_axis</span><span class="nt">(self, labels, axis, level, errors)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4183</span><span class="s2">                 new_axis = axis.drop(labels, level=level, errors=errors)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4184</span><span class="s2">             else:</span>
+<span class="ne">-&gt; </span><span class="mi">4185</span><span class="s2">                 new_axis = axis.drop(labels, errors=errors)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4186</span><span class="s2">             result = self.reindex(**{axis_name: new_axis})</span>
+<span class="g g-Whitespace">   </span><span class="mi">4187</span><span class="s2"> </span>
 
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/core/indexes/base.py</span> in <span class="ni">drop</span><span class="nt">(self, labels, errors)</span>
-<span class="g g-Whitespace">   </span><span class="mi">6015</span>         <span class="k">if</span> <span class="n">mask</span><span class="o">.</span><span class="n">any</span><span class="p">():</span>
-<span class="g g-Whitespace">   </span><span class="mi">6016</span>             <span class="k">if</span> <span class="n">errors</span> <span class="o">!=</span> <span class="s2">&quot;ignore&quot;</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">6017</span>                 <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">labels</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span><span class="si">}</span><span class="s2"> not found in axis&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">6018</span>             <span class="n">indexer</span> <span class="o">=</span> <span class="n">indexer</span><span class="p">[</span><span class="o">~</span><span class="n">mask</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">6019</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">indexer</span><span class="p">)</span>
+<span class="nn">/usr/local/lib/python3.8/dist-packages/pandas/core/indexes/base.py</span> in <span class="ni">drop</span><span class="nt">(self, labels, errors)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6015</span><span class="s2">         if mask.any():</span>
+<span class="g g-Whitespace">   </span><span class="mi">6016</span><span class="s2">             if errors != &quot;ignore&quot;:</span>
+<span class="ne">-&gt; </span><span class="mi">6017</span><span class="s2">                 raise KeyError(f&quot;</span><span class="si">{labels[mask]}</span><span class="s2"> not found in axis&quot;)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6018</span><span class="s2">             indexer = indexer[~mask]</span>
+<span class="g g-Whitespace">   </span><span class="mi">6019</span><span class="s2">         return self.delete(indexer)</span>
 
 <span class="ne">KeyError</span>: &quot;[&#39;Species&#39;] not found in axis&quot;
 </pre></div>

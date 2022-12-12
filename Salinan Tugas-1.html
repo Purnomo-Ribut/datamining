@@ -54,8 +54,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tugas 2 - Diskritisasi" href="Tugas-2.html" />
-    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -120,9 +118,9 @@ const thebe_selector_output = ".output, .cell_output"
   Tugas
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Tugas-1.html">
    <strong>
     Tugas 1 - Dissimilarity
    </strong>
@@ -243,7 +241,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/Purnomo-Ribut/datamining.git/gh-pages?urlpath=tree/_sources/Tugas-1.ipynb"
+        <a href="https://mybinder.org/v2/gh/Purnomo-Ribut/datamining.git/gh-pages?urlpath=tree/_sources/Salinan Tugas-1.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -261,7 +259,7 @@ title="Launch on Binder"
       </li>
       
       <li>
-        <a href="https://colab.research.google.com/github/Purnomo-Ribut/datamining.git/blob/gh-pages/_sources/Tugas-1.ipynb"
+        <a href="https://colab.research.google.com/github/Purnomo-Ribut/datamining.git/blob/gh-pages/_sources/Salinan Tugas-1.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -321,7 +319,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/Purnomo-Ribut/datamining.git/issues/new?title=Issue%20on%20page%20%2FTugas-1.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/Purnomo-Ribut/datamining.git/issues/new?title=Issue%20on%20page%20%2FSalinan Tugas-1.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -349,7 +347,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/Tugas-1.ipynb"
+        <a href="_sources/Salinan Tugas-1.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -414,6 +412,50 @@ title="Print to PDF"
 <h1><strong>Tugas 1 - Dissimilarity</strong><a class="headerlink" href="#tugas-1-dissimilarity" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">d5df0069828e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.8/dist-packages/google/colab/drive.py</span> in <span class="ni">mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, readonly)</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span> <span class="k">def</span> <span class="nf">mount</span><span class="p">(</span><span class="n">mountpoint</span><span class="p">,</span> <span class="n">force_remount</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timeout_ms</span><span class="o">=</span><span class="mi">120000</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">100</span>   <span class="sd">&quot;&quot;&quot;Mount your Google Drive at the specified mountpoint path.&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">101</span>   <span class="k">return</span> <span class="n">_mount</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">102</span>       <span class="n">mountpoint</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">103</span>       <span class="n">force_remount</span><span class="o">=</span><span class="n">force_remount</span><span class="p">,</span>
+
+<span class="nn">/usr/local/lib/python3.8/dist-packages/google/colab/drive.py</span> in <span class="ni">_mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, ephemeral, readonly)</span>
+<span class="g g-Whitespace">    </span><span class="mi">122</span>       <span class="s1">&#39;TBE_EPHEM_CREDS_ADDR&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="n">ephemeral</span> <span class="k">else</span> <span class="n">_os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;TBE_CREDS_ADDR&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">123</span>   <span class="k">if</span> <span class="n">ephemeral</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">124</span>     <span class="n">_message</span><span class="o">.</span><span class="n">blocking_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">125</span>         <span class="s1">&#39;request_auth&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;authType&#39;</span><span class="p">:</span> <span class="s1">&#39;dfs_ephemeral&#39;</span><span class="p">},</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">126</span> 
+
+<span class="nn">/usr/local/lib/python3.8/dist-packages/google/colab/_message.py</span> in <span class="ni">blocking_request</span><span class="nt">(request_type, request, timeout_sec, parent)</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span>   <span class="n">request_id</span> <span class="o">=</span> <span class="n">send_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">170</span>       <span class="n">request_type</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="n">expect_reply</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">171</span>   <span class="k">return</span> <span class="n">read_reply_from_input</span><span class="p">(</span><span class="n">request_id</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.8/dist-packages/google/colab/_message.py</span> in <span class="ni">read_reply_from_input</span><span class="nt">(message_id, timeout_sec)</span>
+<span class="g g-Whitespace">     </span><span class="mi">95</span>     <span class="n">reply</span> <span class="o">=</span> <span class="n">_read_next_input_message</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="n">_NOT_READY</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">97</span>       <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.025</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span>       <span class="k">continue</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span>     <span class="k">if</span> <span class="p">(</span><span class="n">reply</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;colab_reply&#39;</span> <span class="ow">and</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#awal mengimpor library pandas dan numpy </span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -424,7 +466,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#lalu menampilkan data yang sudah di upload di google drive</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/datamining/tugas/archive (3).zip&#39;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/niniengC/dataset/main/healthcare-dataset-stroke-data.csv&#39;</span><span class="p">)</span>
 <span class="c1">#menampikan data dari bawah karena ada survived yang berbeda</span>
 <span class="n">data</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
 </pre></div>
@@ -432,7 +474,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-fd79e7a3-8aa7-4be5-9d9f-ab9943cdaff3">
+  <div id="df-68025360-5ef5-4a33-90c2-76fdb2d15ce7">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -452,76 +494,83 @@ title="Print to PDF"
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>PassengerId</th>
-      <th>Country</th>
-      <th>Firstname</th>
-      <th>Lastname</th>
-      <th>Sex</th>
-      <th>Age</th>
-      <th>Category</th>
-      <th>Survived</th>
+      <th>id</th>
+      <th>gender</th>
+      <th>age</th>
+      <th>hypertension</th>
+      <th>...</th>
+      <th>avg_glucose_level</th>
+      <th>bmi</th>
+      <th>smoking_status</th>
+      <th>stroke</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>984</th>
-      <td>985</td>
-      <td>Sweden</td>
-      <td>ANNA INGRID BIRGITTA</td>
-      <td>OSTROM</td>
-      <td>F</td>
-      <td>60</td>
-      <td>P</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>985</th>
-      <td>986</td>
-      <td>Sweden</td>
-      <td>ELMAR MIKAEL</td>
-      <td>OUN</td>
-      <td>M</td>
-      <td>34</td>
-      <td>P</td>
+      <th>5105</th>
+      <td>18234</td>
+      <td>Female</td>
+      <td>80.0</td>
       <td>1</td>
-    </tr>
-    <tr>
-      <th>986</th>
-      <td>987</td>
-      <td>Sweden</td>
-      <td>ENN</td>
-      <td>QUNAPUU</td>
-      <td>M</td>
-      <td>77</td>
-      <td>P</td>
+      <td>...</td>
+      <td>83.75</td>
+      <td>NaN</td>
+      <td>never smoked</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>987</th>
-      <td>988</td>
-      <td>Sweden</td>
-      <td>LY</td>
-      <td>GUNAPUU</td>
-      <td>F</td>
-      <td>87</td>
-      <td>P</td>
+      <th>5106</th>
+      <td>44873</td>
+      <td>Female</td>
+      <td>81.0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>125.20</td>
+      <td>40.0</td>
+      <td>never smoked</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>988</th>
-      <td>989</td>
-      <td>Sweden</td>
-      <td>CARL</td>
-      <td>OVBERG</td>
-      <td>M</td>
-      <td>42</td>
-      <td>P</td>
-      <td>1</td>
+      <th>5107</th>
+      <td>19723</td>
+      <td>Female</td>
+      <td>35.0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>82.99</td>
+      <td>30.6</td>
+      <td>never smoked</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5108</th>
+      <td>37544</td>
+      <td>Male</td>
+      <td>51.0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>166.29</td>
+      <td>25.6</td>
+      <td>formerly smoked</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5109</th>
+      <td>44679</td>
+      <td>Female</td>
+      <td>44.0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>85.28</td>
+      <td>26.2</td>
+      <td>Unknown</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
+<p>5 rows × 12 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-fd79e7a3-8aa7-4be5-9d9f-ab9943cdaff3')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-68025360-5ef5-4a33-90c2-76fdb2d15ce7')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -572,12 +621,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-fd79e7a3-8aa7-4be5-9d9f-ab9943cdaff3 button.colab-df-convert');
+          document.querySelector('#df-68025360-5ef5-4a33-90c2-76fdb2d15ce7 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-fd79e7a3-8aa7-4be5-9d9f-ab9943cdaff3');
+          const element = document.querySelector('#df-68025360-5ef5-4a33-90c2-76fdb2d15ce7');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -606,14 +655,11 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PassengerId     int64
-Country        object
-Firstname      object
-Lastname       object
-Sex            object
-Age             int64
-Category       object
-Survived        int64
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LamaUsaha          int64
+Pekerja            int64
+Omzet              int64
+JumlahAset         int64
+HasilKeputusan    object
 dtype: object
 </pre></div>
 </div>
@@ -665,7 +711,7 @@ dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-8f2dafbe-6e4a-418c-ae6e-18e8bd180e17">
+  <div id="df-cea3604f-752f-4619-85bf-12ed7c2efa13">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -749,7 +795,7 @@ dtype: object
 </table>
 <p>10 rows × 3 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-8f2dafbe-6e4a-418c-ae6e-18e8bd180e17')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-cea3604f-752f-4619-85bf-12ed7c2efa13')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -800,12 +846,12 @@ dtype: object
 
       <script>
         const buttonEl =
-          document.querySelector('#df-8f2dafbe-6e4a-418c-ae6e-18e8bd180e17 button.colab-df-convert');
+          document.querySelector('#df-cea3604f-752f-4619-85bf-12ed7c2efa13 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-8f2dafbe-6e4a-418c-ae6e-18e8bd180e17');
+          const element = document.querySelector('#df-cea3604f-752f-4619-85bf-12ed7c2efa13');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -835,7 +881,7 @@ dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-d588f213-c4f7-4630-9c9c-6d13ee0e2563">
+  <div id="df-f40ef104-8ad4-4e35-9a24-50d27ef81379">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -919,7 +965,7 @@ dtype: object
 </table>
 <p>10 rows × 3 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-d588f213-c4f7-4630-9c9c-6d13ee0e2563')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-f40ef104-8ad4-4e35-9a24-50d27ef81379')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -970,12 +1016,12 @@ dtype: object
 
       <script>
         const buttonEl =
-          document.querySelector('#df-d588f213-c4f7-4630-9c9c-6d13ee0e2563 button.colab-df-convert');
+          document.querySelector('#df-f40ef104-8ad4-4e35-9a24-50d27ef81379 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-d588f213-c4f7-4630-9c9c-6d13ee0e2563');
+          const element = document.querySelector('#df-f40ef104-8ad4-4e35-9a24-50d27ef81379');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1035,7 +1081,7 @@ dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-aabf6fe6-afb5-4377-b6db-be186243d012">
+  <div id="df-596c9ce5-2204-4b36-b878-f03cf24ea268">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1119,7 +1165,7 @@ dtype: object
 </table>
 <p>10 rows × 3 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-aabf6fe6-afb5-4377-b6db-be186243d012')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-596c9ce5-2204-4b36-b878-f03cf24ea268')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1170,12 +1216,12 @@ dtype: object
 
       <script>
         const buttonEl =
-          document.querySelector('#df-aabf6fe6-afb5-4377-b6db-be186243d012 button.colab-df-convert');
+          document.querySelector('#df-596c9ce5-2204-4b36-b878-f03cf24ea268 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-aabf6fe6-afb5-4377-b6db-be186243d012');
+          const element = document.querySelector('#df-596c9ce5-2204-4b36-b878-f03cf24ea268');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1241,7 +1287,7 @@ dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-6a41f91e-7718-44d5-a452-220c0dfab74b">
+  <div id="df-3b3d16ab-bccd-4399-9597-3bc9db94378d">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1279,7 +1325,7 @@ dtype: object
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-6a41f91e-7718-44d5-a452-220c0dfab74b')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3b3d16ab-bccd-4399-9597-3bc9db94378d')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1330,12 +1376,12 @@ dtype: object
 
       <script>
         const buttonEl =
-          document.querySelector('#df-6a41f91e-7718-44d5-a452-220c0dfab74b button.colab-df-convert');
+          document.querySelector('#df-3b3d16ab-bccd-4399-9597-3bc9db94378d button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-6a41f91e-7718-44d5-a452-220c0dfab74b');
+          const element = document.querySelector('#df-3b3d16ab-bccd-4399-9597-3bc9db94378d');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1364,7 +1410,7 @@ dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-cb0d0e7b-2002-4af3-b364-9ccb9b4772ce">
+  <div id="df-403b51a0-c5bf-40f7-ad3b-f7d67b455b1f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1422,7 +1468,7 @@ dtype: object
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-cb0d0e7b-2002-4af3-b364-9ccb9b4772ce')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-403b51a0-c5bf-40f7-ad3b-f7d67b455b1f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1473,12 +1519,12 @@ dtype: object
 
       <script>
         const buttonEl =
-          document.querySelector('#df-cb0d0e7b-2002-4af3-b364-9ccb9b4772ce button.colab-df-convert');
+          document.querySelector('#df-403b51a0-c5bf-40f7-ad3b-f7d67b455b1f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-cb0d0e7b-2002-4af3-b364-9ccb9b4772ce');
+          const element = document.querySelector('#df-403b51a0-c5bf-40f7-ad3b-f7d67b455b1f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1691,20 +1737,6 @@ dtype: object
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Welcome to your Jupyter Book</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="Tugas-2.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>Tugas 2 - Diskritisasi</strong></p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
