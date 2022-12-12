@@ -155,13 +155,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="tugas-6.html">
-   <strong>
-    Tugas 6 -
-   </strong>
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="Tugas-7.html">
    <strong>
     Tugas 7 -
@@ -410,6 +403,12 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="tugas-3-k-kn">
 <h1><strong>Tugas 3 - K-KN</strong><a class="headerlink" href="#tugas-3-k-kn" title="Permalink to this headline">#</a></h1>
+<p>#Persiapan</p>
+<ul class="simple">
+<li><p>Impor train_test_split dari sklearn</p></li>
+<li><p>Impor KNeighborsClassifier dari sklearn</p></li>
+<li><p>Impor pandas library</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -462,8 +461,8 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Tugas-3_2_0.png" src="_images/Tugas-3_2_0.png" />
-<img alt="_images/Tugas-3_2_1.png" src="_images/Tugas-3_2_1.png" />
+<img alt="_images/Tugas-3_3_0.png" src="_images/Tugas-3_3_0.png" />
+<img alt="_images/Tugas-3_3_1.png" src="_images/Tugas-3_3_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -474,6 +473,12 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<p>#Menghitung</p>
+<ul class="simple">
+<li><p>Pisahkan kolom “variety” dari dataframe</p></li>
+<li><p>Ambil kolom “variety” sebagai target kolom untuk kategori kelas</p></li>
+<li><p>Pisahkan data latih dengan data tes</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -486,7 +491,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-6b97cb2d-595f-4500-b350-295ce293d3a1">
+  <div id="df-48014991-de74-42b4-9749-80a2c4f2256f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -630,7 +635,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-6b97cb2d-595f-4500-b350-295ce293d3a1')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-48014991-de74-42b4-9749-80a2c4f2256f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -681,12 +686,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-6b97cb2d-595f-4500-b350-295ce293d3a1 button.colab-df-convert');
+          document.querySelector('#df-48014991-de74-42b4-9749-80a2c4f2256f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-6b97cb2d-595f-4500-b350-295ce293d3a1');
+          const element = document.querySelector('#df-48014991-de74-42b4-9749-80a2c4f2256f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
