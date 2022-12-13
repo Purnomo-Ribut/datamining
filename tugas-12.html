@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="UAS -" href="UAS.html" />
-    <link rel="prev" title="Tugas 8 - Impelemntasi Naive bayes Studi Kasus Peminjaman Uang" href="tugas-8.html" />
+    <link rel="next" title="Projek Uas" href="UAS.html" />
+    <link rel="prev" title="Tugas 9 - Best Accuracy Between Normalization vs Unnomarlization" href="tugas-9.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -168,6 +168,14 @@ const thebe_selector_output = ".output, .cell_output"
    </strong>
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tugas-9.html">
+   <strong>
+    Tugas 9 -
+   </strong>
+   Best Accuracy Between Normalization vs Unnomarlization
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    <strong>
@@ -179,7 +187,7 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="UAS.html">
    <strong>
-    UAS -
+    Projek Uas
    </strong>
   </a>
  </li>
@@ -517,7 +525,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-d28daf60-09de-4deb-b36d-5ea2da21b9c5">
+  <div id="df-03bc460c-d550-42d1-83a2-e3b7d4ee2ad2">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -817,7 +825,7 @@ title="Print to PDF"
 </table>
 <p>1151 rows × 20 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-d28daf60-09de-4deb-b36d-5ea2da21b9c5')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-03bc460c-d550-42d1-83a2-e3b7d4ee2ad2')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -868,12 +876,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-d28daf60-09de-4deb-b36d-5ea2da21b9c5 button.colab-df-convert');
+          document.querySelector('#df-03bc460c-d550-42d1-83a2-e3b7d4ee2ad2 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-d28daf60-09de-4deb-b36d-5ea2da21b9c5');
+          const element = document.querySelector('#df-03bc460c-d550-42d1-83a2-e3b7d4ee2ad2');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1197,6 +1205,348 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<p>k = 10</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf_norm_knn_10</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="n">k_is_10</span><span class="p">)</span>
+<span class="n">clf_norm_knn_10</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_norm</span><span class="p">,</span> <span class="n">y_train_norm</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNeighborsClassifier(n_neighbors=10)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">post_norm_knn_10</span> <span class="o">=</span> <span class="n">clf_norm_knn_10</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test_norm</span><span class="p">)</span>
+<span class="n">probas_norm_knn_10</span> <span class="o">=</span> <span class="n">post_norm_knn_10</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">probas_norm_knn_10</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">probas_norm_knn_10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pred_norm_knn_10</span> <span class="o">=</span> <span class="n">probas_norm_knn_10</span>
+<span class="n">accuracy_norm_knn_10</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test_norm</span><span class="p">,</span> <span class="n">pred_norm_knn_10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Akurasi dengan data ternormalisasi </span><span class="si">{</span><span class="n">accuracy_norm_knn_10</span><span class="si">}</span><span class="s2"> model KNN-10&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Akurasi dengan data ternormalisasi 0.683982683982684 model KNN-10
+</pre></div>
+</div>
+</div>
+</div>
+<p>#Accuracy of Unormalization Data</p>
+<p>k3</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf_knn_3</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="n">k_is_3</span><span class="p">)</span>
+<span class="n">clf_knn_3</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNeighborsClassifier(n_neighbors=3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">post_knn_3</span> <span class="o">=</span> <span class="n">clf_knn_3</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">probas_knn_3</span> <span class="o">=</span> <span class="n">post_knn_3</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">probas_knn_3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">probas_knn_3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pred_knn_3</span> <span class="o">=</span> <span class="n">probas_knn_3</span>
+<span class="n">accuracy_knn_3</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">pred_knn_3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Akurasi dengan data tidak ternormalisasi </span><span class="si">{</span><span class="n">accuracy_knn_3</span><span class="si">}</span><span class="s2"> model KNN-3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Akurasi dengan data tidak ternormalisasi 0.658008658008658 model KNN-3
+</pre></div>
+</div>
+</div>
+</div>
+<p>K5</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf_knn_5</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="n">k_is_5</span><span class="p">)</span>
+<span class="n">clf_knn_5</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNeighborsClassifier()
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">post_knn_5</span> <span class="o">=</span> <span class="n">clf_knn_5</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">probas_knn_5</span> <span class="o">=</span> <span class="n">post_knn_5</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">probas_knn_5</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">probas_knn_5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pred_knn_5</span> <span class="o">=</span> <span class="n">probas_knn_5</span>
+<span class="n">accuracy_knn_5</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">pred_knn_5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Akurasi dengan data tidak ternormalisasi </span><span class="si">{</span><span class="n">accuracy_knn_5</span><span class="si">}</span><span class="s2"> model KNN-5&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Akurasi dengan data tidak ternormalisasi 0.658008658008658 model KNN-5
+</pre></div>
+</div>
+</div>
+</div>
+<p>k7</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf_knn_7</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="n">k_is_7</span><span class="p">)</span>
+<span class="n">clf_knn_7</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNeighborsClassifier(n_neighbors=7)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">post_knn_7</span> <span class="o">=</span> <span class="n">clf_knn_7</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">probas_knn_7</span> <span class="o">=</span> <span class="n">post_knn_7</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">probas_knn_7</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">probas_knn_7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pred_knn_7</span> <span class="o">=</span> <span class="n">probas_knn_7</span>
+<span class="n">accuracy_knn_7</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">pred_knn_7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Akurasi dengan data tidak ternormalisasi </span><span class="si">{</span><span class="n">accuracy_knn_7</span><span class="si">}</span><span class="s2"> model KNN-7&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Akurasi dengan data tidak ternormalisasi 0.6666666666666666 model KNN-7
+</pre></div>
+</div>
+</div>
+</div>
+<p>K 10</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf_knn_10</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="n">k_is_10</span><span class="p">)</span>
+<span class="n">clf_knn_10</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNeighborsClassifier(n_neighbors=10)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">post_knn_10</span> <span class="o">=</span> <span class="n">clf_knn_10</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">probas_knn_10</span> <span class="o">=</span> <span class="n">post_knn_10</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">probas_knn_10</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">probas_knn_10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pred_knn_10</span> <span class="o">=</span> <span class="n">probas_knn_10</span>
+<span class="n">accuracy_knn_10</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">pred_knn_10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Akurasi dengan data tidak ternormalisasi </span><span class="si">{</span><span class="n">accuracy_knn_10</span><span class="si">}</span><span class="s2"> model KNN-10&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Akurasi dengan data tidak ternormalisasi 0.6623376623376623 model KNN-10
+</pre></div>
+</div>
+</div>
+</div>
+<p>#Ensemble Stacking</p>
+<p>Teknik menggunakan banyak model untuk menghasilkan satu model prediksi terbaik</p>
+<p>#Ensemble Stacking dengan data yang sudah di normalisasi</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">estimators_norm</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;gnb&#39;</span><span class="p">,</span><span class="n">clf_norm_nb</span><span class="p">),(</span><span class="s1">&#39;knn-5&#39;</span><span class="p">,</span><span class="n">clf_norm_knn_5</span><span class="p">),(</span><span class="s1">&#39;knn-7&#39;</span><span class="p">,</span><span class="n">clf_norm_knn_7</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">final_estimator_dtc</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">final_estimator_lr</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
+<span class="n">final_estimator_knn_7</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="n">k_is_7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>#Meta Classifier is Decision Tree Classifier</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stack_model</span> <span class="o">=</span> <span class="n">StackingClassifier</span><span class="p">(</span> <span class="n">estimators</span> <span class="o">=</span> <span class="n">estimators_norm</span><span class="p">,</span><span class="n">final_estimator</span> <span class="o">=</span> <span class="n">final_estimator_dtc</span><span class="p">)</span>
+<span class="n">score</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">stack_model</span><span class="p">,</span><span class="n">X_train_norm</span><span class="p">,</span><span class="n">y_train_norm</span><span class="p">,</span><span class="n">cv</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span><span class="n">scoring</span> <span class="o">=</span> <span class="s1">&#39;accuracy&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The accuracy score of is:&quot;</span><span class="p">,</span><span class="n">score</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The accuracy score of is: 0.5945652173913044
+</pre></div>
+</div>
+</div>
+</div>
+<p>#Meta Classifier is Logistic Regression</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stack_model</span> <span class="o">=</span> <span class="n">StackingClassifier</span><span class="p">(</span> <span class="n">estimators</span> <span class="o">=</span> <span class="n">estimators_norm</span><span class="p">,</span><span class="n">final_estimator</span> <span class="o">=</span> <span class="n">final_estimator_lr</span><span class="p">)</span>
+<span class="n">score</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">stack_model</span><span class="p">,</span><span class="n">X_train_norm</span><span class="p">,</span><span class="n">y_train_norm</span><span class="p">,</span><span class="n">cv</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span><span class="n">scoring</span> <span class="o">=</span> <span class="s1">&#39;accuracy&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The accuracy score of is:&quot;</span><span class="p">,</span><span class="n">score</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The accuracy score of is: 0.6543478260869565
+</pre></div>
+</div>
+</div>
+</div>
+<p>Meta Classifier is KNN (K = 7)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stack_model</span> <span class="o">=</span> <span class="n">StackingClassifier</span><span class="p">(</span> <span class="n">estimators</span> <span class="o">=</span> <span class="n">estimators_norm</span><span class="p">,</span><span class="n">final_estimator</span> <span class="o">=</span> <span class="n">final_estimator_knn_7</span><span class="p">)</span>
+<span class="n">score</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">stack_model</span><span class="p">,</span><span class="n">X_train_norm</span><span class="p">,</span><span class="n">y_train_norm</span><span class="p">,</span><span class="n">cv</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span><span class="n">scoring</span> <span class="o">=</span> <span class="s1">&#39;accuracy&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The accuracy score of is:&quot;</span><span class="p">,</span><span class="n">score</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The accuracy score of is: 0.6130434782608696
+</pre></div>
+</div>
+</div>
+</div>
+<p>#Ensemble Stacking dengan data yang tidak di normalisas</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">estimators_unnorm</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;gnb&#39;</span><span class="p">,</span><span class="n">clf_nb</span><span class="p">),(</span><span class="s1">&#39;knn-5&#39;</span><span class="p">,</span><span class="n">clf_knn_5</span><span class="p">),(</span><span class="s1">&#39;knn-7&#39;</span><span class="p">,</span><span class="n">clf_knn_7</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">final_estimator_dtc</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">final_estimator_lr</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
+<span class="n">final_estimator_knn_7</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="n">k_is_7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>#Meta Classifier is Decision Tree Classifier</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stack_model</span> <span class="o">=</span> <span class="n">StackingClassifier</span><span class="p">(</span> <span class="n">estimators</span> <span class="o">=</span> <span class="n">estimators_unnorm</span><span class="p">,</span><span class="n">final_estimator</span> <span class="o">=</span> <span class="n">final_estimator_dtc</span><span class="p">)</span>
+<span class="n">score</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">stack_model</span><span class="p">,</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span><span class="n">cv</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span><span class="n">scoring</span> <span class="o">=</span> <span class="s1">&#39;accuracy&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The accuracy score of is:&quot;</span><span class="p">,</span><span class="n">score</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The accuracy score of is: 0.601086956521739
+</pre></div>
+</div>
+</div>
+</div>
+<p>#Meta Classifier is Logistic Regression</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stack_model</span> <span class="o">=</span> <span class="n">StackingClassifier</span><span class="p">(</span> <span class="n">estimators</span> <span class="o">=</span> <span class="n">estimators_unnorm</span><span class="p">,</span><span class="n">final_estimator</span> <span class="o">=</span> <span class="n">final_estimator_lr</span><span class="p">)</span>
+<span class="n">score</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">stack_model</span><span class="p">,</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span><span class="n">cv</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span><span class="n">scoring</span> <span class="o">=</span> <span class="s1">&#39;accuracy&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The accuracy score of is:&quot;</span><span class="p">,</span><span class="n">score</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The accuracy score of is: 0.6619565217391304
+</pre></div>
+</div>
+</div>
+</div>
+<p>#Meta Classifier is KNN (K = 7)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stack_model</span> <span class="o">=</span> <span class="n">StackingClassifier</span><span class="p">(</span> <span class="n">estimators</span> <span class="o">=</span> <span class="n">estimators_unnorm</span><span class="p">,</span><span class="n">final_estimator</span> <span class="o">=</span> <span class="n">final_estimator_knn_7</span><span class="p">)</span>
+<span class="n">score</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">stack_model</span><span class="p">,</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span><span class="n">cv</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span><span class="n">scoring</span> <span class="o">=</span> <span class="s1">&#39;accuracy&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The accuracy score of is:&quot;</span><span class="p">,</span><span class="n">score</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The accuracy score of is: 0.6228260869565216
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1226,17 +1576,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="tugas-8.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="tugas-9.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><strong>Tugas 8 - Impelemntasi Naive bayes Studi Kasus Peminjaman Uang</strong></p>
+            <p class="prev-next-title"><strong>Tugas 9 -</strong> Best Accuracy Between Normalization vs Unnomarlization</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="UAS.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>UAS -</strong></p>
+        <p class="prev-next-title"><strong>Projek Uas</strong></p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
